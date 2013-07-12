@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.exsplit"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/expense_splitter"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.exsplit.MenuActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>            
+        </activity>
+        <activity android:name="com.exsplit.ViewUserActivity" android:label="@string/item_view_user"></activity>
+        <activity android:name="com.exsplit.AddUserActivity"></activity>
+        <activity android:name="com.exsplit.ViewCategActivity" android:label="@string/item_view_categ"></activity>
+        <activity android:name="com.exsplit.AddCategActivity"></activity>
+        <activity android:name="com.exsplit.ViewExpenseActivity" android:label="@string/item_view_exp"></activity>
+        <activity android:name="com.exsplit.AddExpenseActivity"></activity>
+        <activity android:name="com.exsplit.GenerateReportActivity" android:label="@string/item_gen_rep"></activity>
+        <activity android:name="com.exsplit.AboutExSplitActivity" android:label="@string/item_about"></activity>
+    </application>
+
+</manifest>
