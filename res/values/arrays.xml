@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="currency">
+        <item>@string/indian_rupees</item>
+        <item>@string/us_dollars</item>
+        <item>@string/uk_pounds</item>
+        <item>@string/euro</item>
+        <item>@string/arab_emirates_dirham</item>
+    </string-array>
+    
+    <string-array name="currency_text">
+        <item>Rs.</item>
+        <item>$</item>
+        <item>£</item>
+        <item>€</item>
+        <item>AED</item>
+    </string-array>
+</resources>
