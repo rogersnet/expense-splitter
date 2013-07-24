@@ -26,14 +26,23 @@
 	<string name="no_categ">No Category</string>
 	<string name="no_expense">No Expenses</string>
 	<string name="spent">spent</string>
-	<string name="rupees_on">rupees on</string>
+	<string name="currency_text">NA</string>
 	<string name="exp_categ">Expense Category</string>
 	<string name="exp_user">Spent by</string>
 	<string name="exp_date">Date</string>
 	<string name="exp_date_dob">Pick Date</string>
-	<string name="exp_amt">Amount(in rupees)</string>
+	<string name="exp_amt">Amount</string>
+	<string name="currency">Set Currency</string>
 	<string name="button_done">Done</string>
 	<string name="not_available_text">N/A</string>	
 	<string name="total_expenditure">Total Expense</string>
 	<string name="total_receivables">Total Receivables</string>
+	<string name="text_on">on</string>
+	
+	<!-- Currency Strings -->
+	<string name="indian_rupees">Rupees(Rs.)</string>
+	<string name="us_dollars">Dollars($)</string>
+	<string name="uk_pounds">Pounds(£)</string>
+	<string name="euro">Euro(€)</string>
+	<string name="arab_emirates_dirham">Arab Emirates Dirham(AED)</string>
 </resources>

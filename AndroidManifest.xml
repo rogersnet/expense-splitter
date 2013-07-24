@@ -30,6 +30,7 @@
         <activity android:name="com.exsplit.AddExpenseActivity"></activity>
         <activity android:name="com.exsplit.GenerateReportActivity" android:label="@string/item_gen_rep"></activity>
         <activity android:name="com.exsplit.AboutExSplitActivity" android:label="@string/item_about"></activity>
+        <activity android:name="com.exsplit.SettingsActivity" android:label="@string/item_settings"></activity>
     </application>
 
 </manifest>

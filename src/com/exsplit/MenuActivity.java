@@ -59,6 +59,10 @@ public class MenuActivity extends Activity {
 					startActivity(new Intent(MenuActivity.this,
 							GenerateReportActivity.class));
 					break;
+				case R.string.item_settings:
+					startActivity(new Intent(MenuActivity.this,
+							SettingsActivity.class));
+					break;
 				case R.string.item_about:
 					startActivity(new Intent(MenuActivity.this,
 							AboutExSplitActivity.class));
@@ -79,12 +83,14 @@ public class MenuActivity extends Activity {
 		listMenuItem.add(R.string.item_view_categ);
 		listMenuItem.add(R.string.item_view_exp);
 		listMenuItem.add(R.string.item_gen_rep);
+		listMenuItem.add(R.string.item_settings);
 		listMenuItem.add(R.string.item_about);
 		
 		listImage.add(R.drawable.user);
 		listImage.add(R.drawable.category);
-		listImage.add(R.drawable.expense);
-		listImage.add(R.drawable.report);
+		listImage.add(R.drawable.expenses);
+		listImage.add(R.drawable.reports);
+		listImage.add(R.drawable.settings);
 		listImage.add(R.drawable.about);
 	}
 

@@ -56,7 +56,8 @@ public class ViewCategActivity extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, INSERT_ID, 0, R.string.menu_addcateg);
+		menu.add(0, INSERT_ID, 0, R.string.menu_addcateg).setShowAsAction(
+				MenuItem.SHOW_AS_ACTION_ALWAYS);
 		return true;
 	}
 

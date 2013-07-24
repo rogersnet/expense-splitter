@@ -1,28 +1,33 @@
 package com.exsplit;
 
+import java.util.HashMap;
+
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ContextMenu.ContextMenuInfo;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
-import android.widget.AdapterView.AdapterContextMenuInfo;
 
 public class ViewExpenseActivity extends ListActivity {
+	public static final String PREFS_NAME = "ExSplitPref";
 	private static final int ACTIVITY_CREATE = 0;
 	private static final int INSERT_ID = Menu.FIRST;
 	private static final int DELETE_ID = Menu.FIRST + 1;
 
 	private ExSplitDbAdapter mDbHelper;
 	private Cursor mExpCursor;
+	private static String mCurrText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,18 @@ public class ViewExpenseActivity extends ListActivity {
 		mDbHelper = new ExSplitDbAdapter(this);
 		mDbHelper.open();
 
+		String[] currency  = getResources().getStringArray(R.array.currency);
+		String[] curr_text = getResources().getStringArray(R.array.currency_text);
+
+		HashMap<String, String> myMap = new HashMap<String, String>();
+		for (int i = 0; i < currency.length; i++) {
+		    myMap.put(currency[i], curr_text[i]);
+		}
+		
+		SharedPreferences mApplSettings = getSharedPreferences(PREFS_NAME,MODE_PRIVATE);
+		if (mApplSettings.contains("CURRENCY")){
+			mCurrText = curr_text[mApplSettings.getInt("CURRENCY", 0)];
+		}
 		fillExpenseData();
 		registerForContextMenu(getListView());
 	}
@@ -143,6 +160,10 @@ public class ViewExpenseActivity extends ListActivity {
 
 			TextView view_amount = (TextView) view.findViewById(R.id.amount);
 			view_amount.setText(amount);
+			
+			TextView curr_text   = (TextView) view.findViewById(R.id.text_currency);
+			curr_text.setText(mCurrText);
+			
 		}
 
 		@Override
